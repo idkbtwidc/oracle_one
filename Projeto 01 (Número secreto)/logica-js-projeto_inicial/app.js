@@ -1,3 +1,5 @@
+//INSTALAR O LIVE SERVER
+
 //inserindo uma mensagem na tela.
 //pode ser em aspas simples por ser JS, mas lembre-se de padronizar durante todo o projeto
 alert("Boas vindas ao jogo do número secreto!");
@@ -7,12 +9,14 @@ alert("Boas vindas ao jogo do número secreto!");
 // caso outra pessoa leia seu código, presuma o que ela faz
 //shift + atlt + A para comentários em bloco
 
-let numeroSecreto = 5;
+let numeroSecreto = 9;
 // colocar sem aspas ja que vc deseja exibir o valor da variavel em si
 console.log(numeroSecreto);
 //scanf: msg na tela + receber variável
 //lembrar de testar os erros!
 let chute = prompt("Escolha um número entre 1 e 10");
+console.log('Valor do chute:', chute);
+console.log('Resultado da comparação:', chute == numeroSecreto);
 //transformar o prompt em variável
 
 //iniciando a lógica para testar se o número
@@ -25,3 +29,4 @@ if (chute == numeroSecreto) {
 } else {
   alert(`Você errou! O número secreto era: (${numeroSecreto})`);
 }
+
