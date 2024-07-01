@@ -31,9 +31,8 @@ while (chute != numeroSecreto)
 
         //Ao invés de usar o operador de atribuição "=", que atribui o valor da variável "numeroSecreto" à variável "chute", você deve usar o operador de comparação "==", que verifica se os valores das duas variáveis são iguais.
         if (chute == numeroSecreto) {
-            //para fazer a concatenação de strings e variáveis vc deve substituir as aspas por crase ` e inserir a variavel dentro de cifrao e chaves
-            // console.log(`Texto ${variavel}`);
-            alert(`Parabéns, você acertou o número secreto (${numeroSecreto}) com ${tentativas} tentativas!`);
+            //caso acerte de primeira o while para de forma forçada
+            break;
           } else {
               if (chute>numeroSecreto){
                   alert(`O número secreto é menor que ${chute}!`);
@@ -43,6 +42,17 @@ while (chute != numeroSecreto)
               //tentativas = tentativas + 1;
               tentativas++;
           }
+          //para fazer a concatenação de strings e variáveis vc deve substituir as aspas por crase ` e inserir a variavel dentro de cifrao e chaves
+            // console.log(`Texto ${variavel}`);
     }
+    let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+    alert(`Parabéns, você acertou o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}. :D`);
+
+/*     if (tentativas > 1 ){
+       
+    } else{
+        alert(`Parabéns, você acertou o número secreto (${numeroSecreto}) com ${tentativas} tentativa!`);
+    } */
+   
 
 
