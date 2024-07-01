@@ -2,7 +2,7 @@
 
 contador= 1;
 while (contador <=10){
-    alert(contador);
+    console.log(contador);
     contador++;
 }
 
@@ -11,7 +11,7 @@ while (contador <=10){
 contador2= 10;
 
 while (contador2 >=0){
-    alert (contador2);
+    console.log (contador2);
     contador2--;
 }
 
