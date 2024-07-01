@@ -19,7 +19,6 @@ console.log("Valor do chute:", chute);
 console.log("Resultado da comparação:", chute == numeroSecreto);
 //transformar o prompt em variável
 let tentativas = 1;
-
 //iniciando a lógica para testar se o número
 //recebido em prompt é igual ao número secreto predeterminado
 //enquanto o chute for diferente do numero secreto continuar o looping
