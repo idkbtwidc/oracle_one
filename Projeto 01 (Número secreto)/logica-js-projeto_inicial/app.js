@@ -9,8 +9,8 @@ alert("Boas vindas ao jogo do número secreto!");
 // caso outra pessoa leia seu código, presuma o que ela faz
 //shift + atlt + A para comentários em bloco
 // número gerado aleatoriamente no intervalo [0 e 1[, multiplicado por 100, acrescid o de 1 e considerado apenas a parte inteira.
-
-let numeroSecreto = parseInt(Math.random()*100 + 1);
+let numeroMaximo = prompt ('Insira o número máximo:')
+let numeroSecreto = parseInt(Math.random()*numeroMaximo + 1);
 // colocar sem aspas ja que vc deseja exibir o valor da variavel em si
 console.log(numeroSecreto);
 //scanf: msg na tela + receber variável
@@ -26,7 +26,7 @@ let tentativas = 1;
 while (chute != numeroSecreto)
     {
         
-        let chute = prompt("Escolha um número entre 1 e 100");
+        let chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}`);
         console.log("Valor do chute:", chute);
         console.log("Resultado da comparação:", chute == numeroSecreto);
 
