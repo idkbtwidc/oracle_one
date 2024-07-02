@@ -31,12 +31,12 @@ function maiorNumero(d, e) {
 
 }
 let resultadoMaiorNumero = maiorNumero (7, 15);
-console.log (resultadoMaiorNumero);
+console.log (resultadoMaiorNumero );
 
 //6-Criar uma função que recebe um número como parâmetro e retorna o resultado da multiplicação desse número por ele mesmo
 let quadrado = (x) => x * x;
 let resultadoQuadrado = quadrado (4);
-console.log (resultado);
+console.log (resultadoQuadrado);
 
 //let quadrado = (x) => x * x;
 //é LITERALMENTE a mesma coisa que
