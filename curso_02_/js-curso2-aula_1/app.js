@@ -21,8 +21,8 @@ exibirTextonaTela('p', 'Insira um número de 1 a 10');
 //criação de função que será chamada onclick no botão do index (chute)
 //funções normlamente tem uma só responsabilidade
 function verificarChute() {
-    let chute = document.querySelector('input').value //.value para pegar apenas o valor do input já que ele não é só um texto, é um valor que foi colocado la dentro
-    console.log(numeroSecreto);
+    let chute = document.querySelector('input').value; //.value para pegar apenas o valor do input já que ele não é só um texto, é um valor que foi colocado la dentro
+    console.log(chute == numeroSecreto);
 
 }
 //return pois ela gera uma nova informação que precisa ser armazenada no numeroSecreto
