@@ -1,5 +1,5 @@
-let numeroSecreto = gerarNumeroAleatorio();
-
+let numeroSecreto = gerarNumeroAleatorio ();
+let tentativas = 1;
 
 //document seleciona o html
 //querySelector('NomeDaTag'); seleciona a tag
@@ -22,6 +22,17 @@ exibirTextonaTela('p', 'Insira um número de 1 a 10');
 //funções normlamente tem uma só responsabilidade
 function verificarChute() {
     let chute = document.querySelector('input').value; //.value para pegar apenas o valor do input já que ele não é só um texto, é um valor que foi colocado la dentro
+    if (chute == numeroSecreto){
+        exibirTextonaTela('h1', 'Acertou!');
+        exibirTextonaTela('p', 'Você descobriu o número secreto!');
+
+    }else {
+        if (chute > numeroSecreto) {
+            exibirTextonaTela('p', 'O número secreto é menor');
+        }else{
+            exibirTextonaTela('p', 'O número secreto é maior');
+        }
+    }
     console.log(chute == numeroSecreto);
 
 }
