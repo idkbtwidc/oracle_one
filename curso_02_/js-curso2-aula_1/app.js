@@ -33,6 +33,7 @@ function verificarChute() {
       exibirTextonaTela("p", "O número secreto é menor");
     } else {
       exibirTextonaTela("p", "O número secreto é maior");
+      document.getElementById('reiniciar').removeAttribute('disabled');
     } 
     tentativas++;
     limparCampo();
