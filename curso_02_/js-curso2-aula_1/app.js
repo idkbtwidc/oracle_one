@@ -14,8 +14,11 @@ function exibirTextonaTela(tag, texto) {
   campo.innerHTML = texto;
 }
 
-exibirTextonaTela("h1", "Jogo do número secreto");
-exibirTextonaTela("p", "Insira um número de 1 a 10");
+function exibirMensagemInicial() {
+  exibirTextonaTela("h1", "Jogo do número secreto 2.0");
+  exibirTextonaTela("p", "Insira um número de 1 a 10");
+}
+exibirMensagemInicial();
 
 //criação de função que será chamada onclick no botão do index (chute)
 //funções normlamente tem uma só responsabilidade
@@ -33,11 +36,11 @@ function verificarChute() {
       exibirTextonaTela("p", "O número secreto é menor");
     } else {
       exibirTextonaTela("p", "O número secreto é maior");
-      document.getElementById('reiniciar').removeAttribute('disabled');
-    } 
+      document.getElementById("reiniciar").removeAttribute("disabled");
+    }
     tentativas++;
     limparCampo();
-  } 
+  }
   console.log(chute == numeroSecreto);
 }
 //return pois ela gera uma nova informação que precisa ser armazenada no numeroSecreto
@@ -46,7 +49,14 @@ function gerarNumeroAleatorio() {
 }
 
 function limparCampo() {
-    chute = document.querySelector('input');
-    chute.value = '';
-
+  chute = document.querySelector("input");
+  chute.value = "";
 }
+
+function reiniciarJogo() {
+  numeroSecreto = gerarNumeroAleatorio();
+  limparCampo();
+  tentativas = 1;
+  exibirMensagemInicial();
+  document.getElementById('reiniciar').setAttribute('disabled', true)
+};
