@@ -22,6 +22,18 @@ function calculoImc(altura, peso) { // a função aceita dois parâmetros: altur
 //let calculoImc = (altura,peso) => (altura * altura)/peso;
 
 //2-Criar uma função que calcule o valor do fatorial de um número passado como parâmetro.
+
+// 4!= 4*3*2*1
+// n!= n*(n-1)*(n-2)*(n-3)
 let numero = 4;
 function fatorial(numero) {
-  factorialize; }
+let contador = 0;
+let fatorial = 0;
+
+while(contador < numero){
+  let fator = numero - contador;
+  fatorial = fatorial*fator;
+  return fatorial;
+  }
+}
+
