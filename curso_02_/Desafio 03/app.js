@@ -12,10 +12,10 @@ let imc = calculoImc(altura, peso);
 console.log(`Seu IMC é: ${imc}`);
 
 //Lembrar da definição do Imc fora da função
-function calculoImc(altura, peso) { // a função aceita dois parâmetros: altura e peso.
-  let imc = peso / (altura ** 2);
+function calculoImc(altura, peso) {
+  // a função aceita dois parâmetros: altura e peso.
+  let imc = peso / altura ** 2;
   return imc;
-
 }
 
 //Testando "Arrow Function"
@@ -25,15 +25,18 @@ function calculoImc(altura, peso) { // a função aceita dois parâmetros: altur
 
 // 4!= 4*3*2*1
 // n!= n*(n-1)*(n-2)*(n-3)
+
 let numero = 4;
-function fatorial(numero) {
-let contador = 0;
+let contador = 1;
 let fatorial = 0;
+function fatorial(numero) {
+  contador = 1;
+  fatorial = 0;
+  while (contador < numero) {
+    let calculo = numero * (numero - contador);
 
-while(contador < numero){
-  let fator = numero - contador;
-  fatorial = fatorial*fator;
-  return fatorial;
+    fatorial = fatorial + calculo; //operador =+ existe?
+    contador++;
   }
+  return fatorial();
 }
-
