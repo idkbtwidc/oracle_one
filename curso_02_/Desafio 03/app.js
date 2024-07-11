@@ -26,17 +26,33 @@ function calculoImc(altura, peso) {
 // 4!= 4*3*2*1
 // n!= n*(n-1)*(n-2)*(n-3)
 
-let numero = 4;
-let contador = 1;
-let fatorial = 0;
-function fatorial(numero) {
-  contador = 1;
-  fatorial = 0;
-  while (contador < numero) {
-    let calculo = numero * (numero - contador);
+// let numero = 4;
+// let contador = 1;
+// let fatorial = 0;
+// function fatorial(n) {
+//   contador = 1;
+//   fatorial = 0;
+//   while (contador < numero) {
+//     let calculo = numero * (numero - contador);
+//     calculo+= calculo;
+//      //operador =+ existe?
+//     contador++;
+//   }
+//   return fatorial();
+// }
 
-    fatorial = fatorial + calculo; //operador =+ existe?
+let numero = 4;
+
+function calcularFatorial(numero) {
+  let contador = 1;
+  let fatorial = numero; // Inicializa com o próprio número
+
+  while (contador < numero) {
+    fatorial *= (numero - contador); // Multiplica por (n - contador)
     contador++;
   }
-  return fatorial();
+
+  return fatorial;
 }
+
+console.log(calcularFatorial(numero)); // Deve imprimir 24
